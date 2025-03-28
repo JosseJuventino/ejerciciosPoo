@@ -19,6 +19,7 @@ public class PromedioCalc {
         System.out.println("Promedio: " + promedio);
         System.out.println("Máximo: " + maximo);
         System.out.println("Minimo: " + minimo);
+        String resultado = (promedio >= 6.0) ? "Aprobado" : "Reprobado";
     }
 
     private static double calcularPromedio(double[] notas) {
