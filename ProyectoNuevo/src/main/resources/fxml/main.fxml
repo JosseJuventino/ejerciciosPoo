@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainController">
+    
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    
+    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Gestor de Cuerpos Celestes" />
+    
+    <GridPane alignment="CENTER" hgap="10" vgap="10">
+        <padding>
+            <Insets bottom="20" left="10" right="10" top="20" />
+        </padding>
+        
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nombreField" style="-fx-background-color: yellow;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        
+        <Label text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="tipoComboBox" prefHeight="26.0" prefWidth="155.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        
+        <Label text="Diámetro (km):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="diametroField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        
+        <Label text="Masa (kg):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="masaField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="agregarButton" text="Agregar" />
+        <Button fx:id="modificarButton" text="Modificar" />
+        <Button fx:id="eliminarButton" text="Eliminar" />
+    </HBox>
+    
+    <TableView fx:id="cuerposCelestesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nombreColumn" text="Nombre" />
+            <TableColumn fx:id="tipoColumn" text="Tipo" />
+            <TableColumn fx:id="diametroColumn" text="Diámetro (km)" />
+            <TableColumn fx:id="masaColumn" text="Masa (kg)" />
+        </columns>
+    </TableView>
+</VBox>
