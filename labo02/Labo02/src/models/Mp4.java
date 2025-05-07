@@ -22,7 +22,4 @@ public class Mp4 extends Formato implements Descargable {
                 nombreArchivo, tamañoMB);
     }
 
-    public String getResolucion() {
-        return resolucion;
-    }
 }

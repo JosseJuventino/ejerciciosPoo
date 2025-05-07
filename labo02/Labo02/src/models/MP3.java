@@ -1,6 +1,5 @@
 package models;
 
-// Mp3.java
 public class MP3 extends Formato implements Descargable {
     private int bitrateKbps;
 
@@ -23,7 +22,6 @@ public class MP3 extends Formato implements Descargable {
                 nombreArchivo, tamañoMB);
     }
 
-    // Getter específico
     public int getBitrateKbps() {
         return bitrateKbps;
     }

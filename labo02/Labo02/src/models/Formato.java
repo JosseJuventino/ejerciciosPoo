@@ -1,12 +1,6 @@
 package models;
 
 public abstract class Formato {
-    /**
-     * Al declarar los atributos de la clase Formato como protected,
-     * permitimos que las subclases (Mp3, Mp4, etc.) accedan directamente
-     * a esos campos, pero seguimos impidiendo el acceso directo desde clases
-     * ajenas al paquete o que no hereden.
-     */
     protected String nombreArchivo;
     protected double tamañoMB;
     protected int contadorReproducciones = 0;
